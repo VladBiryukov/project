@@ -1,3 +1,33 @@
+$color:   rgba(255, 255, 255, 0.8);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*сброс стилей*/
 .container {
   margin: 0 auto;
   padding: 0 20px;
@@ -13,4 +43,10 @@ body{
 h1,h2,h3,h4,h5,h6,p,a,li,ol,ul{
   padding: 0;
   margin: 0;
+}
+li,ol,ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
 }
