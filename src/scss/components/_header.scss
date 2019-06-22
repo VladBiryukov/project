@@ -1,1 +1,36 @@
- 
+.header {
+  &__logo {
+    margin-right: 24px;
+  }
+}
+.header__menu {
+  background-color: rgb(27, 27, 54);
+  display: flex;
+  align-items: center;
+
+  &_items {
+    display: flex;
+  }
+
+  &_item {
+    margin-right: 20px;
+    a {
+      @include item_style();
+      color: $header__menu;
+      &:hover {
+        color: $gold;
+        transition: 0.3s;
+      }
+    }
+  }
+  &_phone {
+    @include header_phone();
+    margin-left: 42px;
+  }
+  &_column {
+    position: relative;
+    margin-left: 18px;
+  }
+
+   
+} 
