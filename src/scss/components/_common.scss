@@ -1,1 +1,16 @@
- 
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1180px;
+}
+body{
+    margin: 0;
+}
+*{
+  box-sizing: border-box; 
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1,h2,h3,h4,h5,h6,p,a,li,ol,ul{
+  padding: 0;
+  margin: 0;
+}
