@@ -46,7 +46,7 @@ function fonts() {
 }
 //Обработка img
 function img() {
-  return gulp.src('./src/image/**/*')
+  return gulp.src('./src/image/**/**/*')
   .pipe(gulp.dest('./build/img'))
   .pipe(browserSync.reload({ stream: true }))
 }
