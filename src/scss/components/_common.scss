@@ -2,7 +2,9 @@
 $header__menu: rgba(255, 255, 255, 0.8);
 $gold: #ffe195;
 $black: #000000;
-$btn_hover: #0e1420;
+/*background color*/
+$btn_hidden: #0e1420;
+ 
 // стиль шрифта
 
 @mixin item_style {
@@ -19,6 +21,7 @@ $btn_hover: #0e1420;
 }
 @mixin hidden_link {
   white-space: nowrap;
+  text-transform: uppercase;
 }
 @mixin btn {
   user-select: none;
