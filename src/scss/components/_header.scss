@@ -10,15 +10,75 @@
       color: $header__menu;
       &:hover {
         color: $gold;
-        transition: 0.3s;
+        transition: $transition;
       }
     }
   }
 }
+
+.header {
+  font-family: $font-signika;
+  font-weight: 300;
+  background-color: $header;
+  //логотип
+  &__logo {
+    margin-right: 24px;
+    &:hover {
+      opacity: 0.6;
+      transition: $transition;
+    }
+  }
+  //блок меню
+  &__menu {
+    display: flex;
+    align-items: center;
+  }
+  //блок контакты
+  &__contacts {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    position: relative;
+  }
+  // телефон
+  &__phone {
+    padding-right: 18px;
+    font-size: 16px;
+    font-weight: 600;
+    white-space: nowrap;
+    color: $gold;
+    &:hover {
+      color: $dark-gold;
+      transition: $transition;
+    }
+  }
+  .header__contacts_button a::before{
+    content: '';
+    border: 1px solid red;
+    padding: 2000px;  
+    z-index: 4;
+  }
+  // кнопка справа
+  &__contacts_button {
+     
+    a {
+      @include item_style();
+      user-select: none;
+      padding: 6px 12px 6px 32px;
+      background: $gold;
+      color: $btn_hidden;
+
+      &:hover {
+        background: $dark-gold;
+        transition: $transition;
+      }
+    }
+  }
+}
+
 // меню в колонну
+/* 
 .header__menu_column {
-  position: absolute;
-  display: none;
   li {
     a {
       background-color: $gold;
@@ -32,43 +92,15 @@
       &:hover {
         background: $gold;
         color: $btn_hidden;
+        transition: $transition;
       }
     }
   }
-}
+} */
 
-.header {
-  font-family: $font-signika;
-  font-weight: 300;
-  background-color: rgb(27, 27, 54);
-  //логотип
-  &__logo {
-    margin-right: 24px;
-  }
-  //блок меню
-  &__menu {
-    display: flex;
-    align-items: center;
-  }
-  //блок контакты
-  &__contacts {
-    display: flex;
-    border: 2px solid red;
-  }
-  &__phone {
-    font-size: 16px;
-    font-weight: 600;
-    white-space: nowrap;
-    color: $gold;
-  }
-  // кнопка справа
-  &__menu_button {
-    a {
-      user-select: none;
-      padding: 6px 12px;
-      @include item_style();
-      background: $gold;
-      color: $btn_hidden;
-    }
-  }
-}
+
+
+
+// MEDIA
+
+ 

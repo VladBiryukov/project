@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css?family=Signika:300,400,600&display=swap");
+// color
+$header__menu: rgba(255, 255, 255, 0.8);
+$gold: #ffe195;
+$black: #000000;
+
+// hover
+$dark-gold: #CFB87E;;
+
+// background color
+$header:rgba(27,49,75,0.75);
+$btn_hidden: #0e1420;
+$font-signika: "Signika";
+
+//анимация
+$transition: 0.3s;
+// стиль шрифта
+@mixin item_style {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+@mixin hidden_link {
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+//сброс стилей
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1180px;
+}
+body {
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+li,
+ol,
+ul {
+  padding: 0;
+  margin: 0;
+}
+li,
+ol,
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
