@@ -1,18 +1,9 @@
-.header {
-    background-color: rgb(27, 27, 54);
-
-  &__menu {
-    display: flex;
-    align-items: center;
-  }
-  &__logo {
-    margin-right: 24px;
-  }
-  &__menu_items {
-    display: flex;
-  }
-
-  &__menu_item {
+// Меню навигация по сайту
+.header__menu_items {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 0 20px;
+  li {
     margin-right: 20px;
     a {
       @include item_style();
@@ -23,40 +14,20 @@
       }
     }
   }
-  &__menu_phone {
-    @include header_phone();
-    /* margin-left: 42px; */
-  }
-  &__menu_column {
-    position: relative;
-    margin-left: 18px;
-    &:hover .header__menu_hidden{
-        display: block; 
-    }
-  }
-
-  &__menu_button {
-    a {
-      user-select: none;
-      padding: 6px 12px;
-      @include item_style();
-      background: $gold;
-      color: $btn_hidden;
-    }
-     
-  }
-  &__menu_hidden {
-    position: absolute;
-    display: none;
-  }
-  &__menu_hidden_button {
-    margin-top: 13px;
+}
+// меню в колонну
+.header__menu_column {
+  position: absolute;
+  display: none;
+  li {
     a {
       background-color: $gold;
       padding: 6px 12px;
       user-select: none;
       background: $btn_hidden;
       color: $gold;
+      margin-bottom: 5px;
+      white-space: nowrap;
       @include item_style();
       &:hover {
         background: $gold;
@@ -65,4 +36,39 @@
     }
   }
 }
- 
+
+.header {
+  font-family: $font-signika;
+  font-weight: 300;
+  background-color: rgb(27, 27, 54);
+  //логотип
+  &__logo {
+    margin-right: 24px;
+  }
+  //блок меню
+  &__menu {
+    display: flex;
+    align-items: center;
+  }
+  //блок контакты
+  &__contacts {
+    display: flex;
+    border: 2px solid red;
+  }
+  &__phone {
+    font-size: 16px;
+    font-weight: 600;
+    white-space: nowrap;
+    color: $gold;
+  }
+  // кнопка справа
+  &__menu_button {
+    a {
+      user-select: none;
+      padding: 6px 12px;
+      @include item_style();
+      background: $gold;
+      color: $btn_hidden;
+    }
+  }
+}
