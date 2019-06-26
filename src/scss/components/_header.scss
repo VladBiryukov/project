@@ -26,6 +26,7 @@
   //логотип
   &__logo {
     margin-right: 24px;
+    user-select: none;
 
     &:hover {
       opacity: 0.6;
@@ -48,10 +49,7 @@
   // телефон
   &__phone {
     padding-right: 18px;
-    font-size: 18px;
-    font-weight: 600;
-    white-space: nowrap;
-    color: $gold;
+    @include phone_style();
 
     &:hover {
       color: $dark-gold;
@@ -107,16 +105,67 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px 20px 20px 30px;
+    padding: 10px 20px 20px 20px;
   }
   &__block_mobile {
-    border: 1px solid red;
     width: 100%;
     height: 100%;
   }
+  &__logo_box {
+    display: flex;
+    align-items: center;
+  }
   &__logo_mobil_img {
+    margin-right: 45px;
     width: 55px;
     height: 55px;
+    user-select: none;
+  }
+  &__phone_mobil {
+    @include phone_style();
+  }
+  // навигация по сайту мобильная версия
+  &__navigation_mobil {
+    margin-top: 35px;
+    li {
+      margin-bottom: 18px;
+      a {
+        @include item_style();
+        color: $header__menu;
+        &:hover {
+          color: $gold;
+          transition: $transition;
+        }
+      }
+    }
+  }
+  //контакты мобильная версия
+  &__contacts_mobil {
+    li {
+      margin-bottom: 14px;
+      a {
+        @include item_style();
+        background-color: $btn_hidden;
+        color: $gold;
+        padding: 6px 12px 6px 32px;
+        position: relative;
+        &::before {
+          content: "";
+          background: url("./img/header/Line_gold.png");
+          background-repeat: no-repeat;
+          background-position: 50%;
+          left: 3%;
+          padding: 10px;
+          position: absolute;
+          bottom: 0;
+          top: 0;
+        }
+        &:hover {
+          background-color: $dark-gold;
+          transition: $transition;
+        }
+      }
+    }
   }
 }
 

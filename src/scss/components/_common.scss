@@ -14,10 +14,16 @@ $menu_mobile:rgba(1, 23, 45, 0.95);
 //шрифт
 $font-signika: "Signika";
 
-
+ 
 //анимация
 $transition: 0.3s;
 // стиль шрифта
+@mixin phone_style {
+  font-size: 18px;
+  font-weight: 600;
+  white-space: nowrap;
+  color: $gold;
+}
 @mixin item_style {
   font-weight: 600;
   font-size: 14px;
