@@ -17,6 +17,9 @@
 }
 
 .header {
+  &__block {
+    position: relative;
+  }
   font-family: $font-signika;
   font-weight: 300;
   background-color: $header;
@@ -60,6 +63,7 @@
     display: none;
     position: absolute;
     right: 0px;
+    z-index: 4;
   }
 
   // кнопка справа
@@ -90,28 +94,40 @@
   }
 }
 
-// меню в колонну
-/* 
-.header__menu_column {
-  li {
-    a {
-      background-color: $gold;
-      padding: 6px 12px;
-      user-select: none;
-      background: $btn_hidden;
-      color: $gold;
-      margin-bottom: 5px;
-      white-space: nowrap;
-      @include item_style();
-      &:hover {
-        background: $gold;
-        color: $btn_hidden;
-        transition: $transition;
-      }
-    }
+//скрытое мобильное меню
+.header {
+  &__menu_mobil {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: $menu_mobile;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px 20px 30px;
   }
-} */
-/* GENERAL STYLES */
+  &__block_mobile {
+    border: 1px solid red;
+    width: 100%;
+    height: 100%;
+  }
+  &__logo_mobil_img {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+// HAMBURGER
+.hamburger {
+  right: 0px;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  cursor: pointer;
+}
 .visuallyHidden {
   position: absolute;
   overflow: hidden;
@@ -122,14 +138,6 @@
   padding: 0;
   border: 0;
 }
-
-.hamburger {
-  right: 0px;
-  width: 30px;
-  height: 30px;
-  position: relative;
-}
-
 .hamburger .bar {
   padding: 0;
   width: 30px;
@@ -139,26 +147,19 @@
   transition: all 0.4s ease-in-out;
   position: absolute;
 }
-
 .bar1 {
   top: 0;
 }
-
 .bar2,
 .bar3 {
   top: 13.5px;
 }
-
 .bar3 {
   right: 0;
 }
-
 .bar4 {
   bottom: 0;
 }
-
-/* HAMBURGER 3 */
-
 .hamburger3 .bar1 {
   transform-origin: 5%;
 }
