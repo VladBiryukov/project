@@ -1,3 +1,6 @@
+body{
+  height: 1000px;
+}
 // Меню-навигация по сайту
 .header__menu_items {
   display: flex;
@@ -106,6 +109,8 @@
     justify-content: center;
     align-items: center;
     padding: 10px 20px 20px 20px;
+    overflow: hidden;
+    display: none;
   }
   &__block_mobile {
     width: 100%;
@@ -141,6 +146,7 @@
   }
   //контакты мобильная версия
   &__contacts_mobil {
+    padding-top: 14px;
     li {
       margin-bottom: 14px;
       a {
@@ -320,3 +326,5 @@
     }
   }
 }
+
+ 
