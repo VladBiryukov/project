@@ -1,4 +1,4 @@
-<header class="header header__fixed">
+<header class="header">
   <div class="container">
     <div class="header__block">
       <div class="header__menu">
@@ -18,44 +18,14 @@
           <div class="header__phone_wrap"><a class="header__phone" href="tel:1-888-357-1068">1-888-357-1068</a></div>
           <div class="header__button_wrap"><a class="header__button" href="#">submit your idea now</a></div>
         </div>
-        <!-- гамбургер -->
-        <div class="header__hamburger">
-          <input type="checkbox" id="checkbox3" class="checkbox3 visuallyHidden">
-          <label for="checkbox3">
-            <div class="hamburger hamburger3">
-              <span class="bar bar1"></span>
-              <span class="bar bar2"></span>
-              <span class="bar bar3"></span>
-              <span class="bar bar4"></span>
-            </div>
-          </label>
-        </div>
+
       </div>
     </div>
   </div>
+  <!-- меню гамбургер -->
+  @@include('./hamburger.html')
   <!-- мобильное меню -->
-  <div class="header__menu_mobil">
-    <div class="header__block_mobile">
-      <div class="header__logo_box">
-        <a href="#"> <img class="header__logo_mobil_img" src="./img/header/header-logo/Group.png" alt=""></a>
-        <a class="header__phone_mobil" href="tel:1-888-357-1068">1-888-357-1068</a>
-      </div>
-      <ol class="header__navigation_mobil">
-        <li><a href="#">Who We Are</a></li>
-        <li><a href="#">What We Do</a></li>
-        <li><a href="#">Patenting Process</a></li>
-        <li><a href="#">FAQ</a></li>
-        <li><a href="#">Fee Structure</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Blog</a></li>
-      </ol>
-      <ol class="header__contacts_mobil">
-        <li><a class="header__button_mobil" href="#">Contact us</a></li>
-        <li><a class="header__button_mobil" href="#">View Our Services</a></li>
-        <li><a class="header__button_mobil" href="#">Download Patent Overview</a></li>
-      </ol>
-    </div>
-  </div>
+  @@include('./menu_mobil.html')
 </header>
 </body>
 

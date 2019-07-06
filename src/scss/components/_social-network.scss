@@ -1,0 +1,19 @@
+.social-network {
+  display: flex;
+  &__widget_img {
+    margin-right: 2px;
+    border-radius: 50%;
+  }
+  &__faccebook {
+    @include sprite_soc(0);
+  }
+  &__twitch {
+    @include sprite_soc(1);
+  }
+  &__xz {
+    @include sprite_soc(2);
+  }
+  &__gmail {
+    @include sprite_soc(3);
+  }
+}

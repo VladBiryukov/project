@@ -1,0 +1,59 @@
+@mixin phone_style {
+  font-size: 18px;
+  font-weight: 600;
+  white-space: nowrap;
+  color: $gold;
+}
+@mixin item_style_header {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+@mixin item_style_menu {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+@mixin hidden_link {
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+// стрелка в кнопке
+@mixin line_gold {
+  background: url("./img/header/Line_gold.png");
+}
+@mixin line {
+  background: url("./img/header/Line.png");
+}
+
+@mixin text($size, $line-height) {
+  font-size: ($size) + px;
+  line-height: ($line-height) + px;
+
+  color: rgba(255, 255, 255, 0.8);
+  font-family: $font-Playfair;
+}
+
+@mixin title($size, $line-height) {
+  font-size: ($size) + px;
+  line-height: ($line-height) + px;
+  color: $text-color;
+  font-weight: bold;
+  font-family: $font-Playfair;
+}
+@mixin sprite_soc($x) {
+  background: url("./img/sprait/Sprait.png");
+  background-position: (($x) * (-32.2px)) -185px;
+  height: 32px;
+  width: 32px;
+  transition: 0.3s;
+  &:hover {
+    opacity: 0.5;
+  }
+}

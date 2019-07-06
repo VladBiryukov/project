@@ -1,0 +1,16 @@
+.anchor {
+  width: 22px;
+  height: 36px;
+  border: 2px $white solid;
+  border-radius: 25px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__runner {
+    animation: anchor 2s linear infinite;
+    background: $white;
+    width: 2px;
+    height: 9px;
+  }
+}

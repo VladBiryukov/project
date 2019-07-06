@@ -1,4 +1,4 @@
-body{
+body {
   height: 1000px;
 }
 // Меню-навигация по сайту
@@ -6,10 +6,11 @@ body{
   display: flex;
   flex-wrap: nowrap;
   padding: 0 20px;
+  margin-left: 5px;
   li {
     margin-right: 20px;
     a {
-      @include item_style();
+      @include item_style_header();
       color: $header__menu;
       &:hover {
         color: $gold;
@@ -22,18 +23,18 @@ body{
 .header {
   &__block {
     position: relative;
+    padding: 55px 0;
   }
   font-family: $font-signika;
   font-weight: 300;
-  background-color: $header;
+  //background-color: $header;
   //логотип
   &__logo {
-    margin-right: 24px;
     user-select: none;
+    transition: $transition;
 
     &:hover {
       opacity: 0.6;
-      transition: $transition;
     }
   }
   //блок меню навигация
@@ -53,21 +54,29 @@ body{
   &__phone {
     padding-right: 18px;
     @include phone_style();
+    transition: $transition;
 
     &:hover {
       color: $dark-gold;
-      transition: $transition;
     }
-  }
-  //гамбургер меню
-  &__hamburger {
-    display: none;
-    position: absolute;
-    right: 0px;
-    z-index: 4;
   }
 
   // кнопка справа
+
+  &__button {
+    text-align: center;
+    position: relative;
+    @include item_style_header();
+    user-select: none;
+    padding: 7px 12px 7px 32px;
+    background: $gold;
+    color: $btn_hidden;
+    transition: $transition;
+
+    &:hover {
+      background: $dark-gold;
+    }
+  }
   &__button::before {
     content: "";
     background: url("./img/header/Line.png");
@@ -79,170 +88,6 @@ body{
     bottom: 0;
     top: 0;
   }
-  &__button {
-    text-align: center;
-    position: relative;
-    @include item_style();
-    user-select: none;
-    padding: 6px 12px 6px 32px;
-    background: $gold;
-    color: $btn_hidden;
-
-    &:hover {
-      background: $dark-gold;
-      transition: $transition;
-    }
-  }
-}
-
-//скрытое мобильное меню
-.header {
-  &__menu_mobil {
-    position: absolute;
-    top: 0;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    background: $menu_mobile;
-    z-index: 3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 20px 20px 20px;
-    overflow: hidden;
-    display: none;
-  }
-  &__block_mobile {
-    width: 100%;
-    height: 100%;
-  }
-  &__logo_box {
-    display: flex;
-    align-items: center;
-  }
-  &__logo_mobil_img {
-    margin-right: 45px;
-    width: 55px;
-    height: 55px;
-    user-select: none;
-  }
-  &__phone_mobil {
-    @include phone_style();
-  }
-  // навигация по сайту мобильная версия
-  &__navigation_mobil {
-    margin-top: 35px;
-    li {
-      margin-bottom: 18px;
-      a {
-        @include item_style();
-        color: $header__menu;
-        &:hover {
-          color: $gold;
-          transition: $transition;
-        }
-      }
-    }
-  }
-  //контакты мобильная версия
-  &__contacts_mobil {
-    padding-top: 14px;
-    li {
-      margin-bottom: 14px;
-      a {
-        @include item_style();
-        background-color: $btn_hidden;
-        color: $gold;
-        padding: 6px 12px 6px 32px;
-        position: relative;
-        &::before {
-          content: "";
-          background: url("./img/header/Line_gold.png");
-          background-repeat: no-repeat;
-          background-position: 50%;
-          left: 3%;
-          padding: 10px;
-          position: absolute;
-          bottom: 0;
-          top: 0;
-        }
-        &:hover {
-          background-color: $dark-gold;
-          transition: $transition;
-        }
-      }
-    }
-  }
-}
-
-// HAMBURGER
-.hamburger {
-  right: 0px;
-  width: 30px;
-  height: 30px;
-  position: relative;
-  cursor: pointer;
-}
-.visuallyHidden {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  width: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-}
-.hamburger .bar {
-  padding: 0;
-  width: 30px;
-  height: 2px;
-  background-color: $gold;
-  display: block;
-  transition: all 0.4s ease-in-out;
-  position: absolute;
-}
-.bar1 {
-  top: 0;
-}
-.bar2,
-.bar3 {
-  top: 13.5px;
-}
-.bar3 {
-  right: 0;
-}
-.bar4 {
-  bottom: 0;
-}
-.hamburger3 .bar1 {
-  transform-origin: 5%;
-}
-.hamburger3 .bar4 {
-  transform-origin: 5%;
-}
-.checkbox3:checked + label > .hamburger3 > .bar1 {
-  transform: rotate(45deg);
-  height: 2px;
-  width: 42px;
-}
-.checkbox3:checked + label > .hamburger3 > .bar3 {
-  transform: rotate(45deg);
-  height: 2px;
-  background-color: transparent;
-}
-.checkbox3:checked + label > .hamburger3 > .bar2 {
-  transform: rotate(-45deg);
-  height: 2px;
-  background-color: transparent;
-}
-.checkbox3:checked + label > .hamburger3 > .bar4 {
-  transform: rotate(-45deg);
-  height: 2px;
-  width: 42px;
-}
-.hamburger3 .bar3 {
-  top: 13.5px;
 }
 
 // MEDIA
@@ -259,6 +104,9 @@ body{
 }
 @media (max-width: 980px) {
   .header {
+    &__block {
+      padding: 20px 0;
+    }
     &__contacts {
       flex-wrap: wrap;
     }
@@ -272,9 +120,7 @@ body{
     &__menu_items {
       display: none;
     }
-    &__hamburger {
-      display: block;
-    }
+
     &__contacts {
       flex-direction: column;
       position: relative;
@@ -282,17 +128,23 @@ body{
     }
     &__phone_wrap {
       position: absolute;
-      left: 0;
+      left: 50px;
     }
     &__button_wrap {
       position: absolute;
-      left: 0;
+      left: 50px;
       top: 25px;
     }
   }
 }
 @media (max-width: 445px) {
+  .hamburger__wrap {
+    top: 30px;
+  }
   .header {
+    &__block {
+      padding: 5px 0;
+    }
     &__menu {
       height: 120px;
     }
@@ -302,13 +154,11 @@ body{
     &__logo {
       position: absolute;
       top: 17px;
+
       &_img {
         height: 47px;
         width: 47px;
       }
-    }
-    &__hamburger {
-      top: 25px;
     }
     &__phone_wrap {
       left: 85px;
@@ -317,6 +167,7 @@ body{
     &__button_wrap {
       top: 75px;
       width: 100%;
+      left: 0;
     }
     &__button {
       display: block;
@@ -326,5 +177,3 @@ body{
     }
   }
 }
-
- 

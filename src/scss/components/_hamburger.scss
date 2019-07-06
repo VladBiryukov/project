@@ -1,0 +1,89 @@
+// HAMBURGER
+.hamburger__wrap {
+  display: none;
+  position: absolute;
+  z-index: 4;
+  top: 90px;
+  right: 20px;
+}
+.hamburger {
+  z-index: 4;
+  top: 0px;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  cursor: pointer;
+}
+
+.visuallyHidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+.hamburger .bar {
+  padding: 0;
+  width: 30px;
+  height: 2px;
+  background-color: $gold;
+  display: block;
+  transition: all 0.4s ease-in-out;
+  position: absolute;
+}
+.bar1 {
+  top: 0;
+}
+.bar2 {
+  top: 13.5px;
+}
+.bar3 {
+  top: 13.5px;
+}
+
+.bar4 {
+  bottom: 2px;
+}
+.bar1 {
+  transform-origin: 5%;
+}
+.bar4 {
+  transform-origin: 5%;
+}
+.checkbox3:checked + label > .hamburger > .bar1 {
+  transform: rotate(45deg);
+  height: 2px;
+  width: 42px;
+}
+.checkbox3:checked + label > .hamburger > .bar3 {
+  transform: rotate(45deg);
+  height: 2px;
+  background-color: transparent;
+}
+.checkbox3:checked + label > .hamburger > .bar2 {
+  transform: rotate(-45deg);
+  height: 2px;
+  background-color: transparent;
+}
+.checkbox3:checked + label > .hamburger > .bar4 {
+  transform: rotate(-45deg);
+  height: 2px;
+  width: 42px;
+}
+.hamburger .bar3 {
+  top: 13.5px;
+}
+@media (max-width: 715px) {
+  .hamburger__wrap {
+    display: block;
+    top: 52px;  
+  }
+}
+@media (max-width: 445px) {
+  .hamburger__wrap {
+    top: 38px;
+  }
+}

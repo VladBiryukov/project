@@ -1,0 +1,93 @@
+//скрытое мобильное меню
+.modal_menu_open {
+  transition: 0.5s;
+  transform: translateX(+100%);
+}
+.modal_menu_close {
+  transition: 0.5s;
+}
+.modal_menu {
+  transform: translateX(-100%);
+  transition: 0.5s;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: $menu_mobile;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 20px 20px 30px;
+  overflow: hidden;
+  display: none;
+
+  &__block {
+    width: 100%;
+    height: 100%;
+  }
+  &__logo_box {
+    display: flex;
+    align-items: center;
+    margin-left: -7px;
+  }
+  &__img_logo {
+    width: 55px;
+    height: 55px;
+    user-select: none;
+  }
+  &__phone {
+    margin-left: 32px;
+    letter-spacing: 1px;
+    @include phone_style();
+  }
+  // навигация по сайту мобильная версия
+  &__navigation {
+    margin-top: 38px;
+    li {
+      margin-bottom: 19px;
+      a {
+        @include item_style_menu();
+        color: $header__menu;
+        transition: $transition;
+        &:hover {
+          color: $gold;
+        }
+      }
+    }
+  }
+
+  &__contacts_mobil {
+    padding-top: 24px;
+    li {
+      margin-bottom: 29px;
+    }
+  }
+
+  &__button_mobil {
+    @include item_style_menu();
+    background-color: $btn_hidden;
+    color: $gold;
+    padding: 6px 12px 6px 41px;
+    position: relative;
+    transition: $transition;
+    &::before {
+      content: "";
+      @include line_gold();
+      background-repeat: no-repeat;
+      background-position: 50%;
+      left: 5%;
+      padding: 10px;
+      position: absolute;
+      bottom: 0;
+      top: 0;
+      &:hover {
+        @include line();
+      }
+    }
+    &:hover {
+      background-color: $dark-gold;
+    }
+  }
+}
