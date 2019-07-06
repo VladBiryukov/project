@@ -13,11 +13,11 @@
   <section class="section_top section_top_index">
     @@include('./../components/header.html')
     <div class="container">
-      <article class="introduction_index">
-        <div class="introduction__content introduction_index__content_index">
-          <h1 class="introduction_index__title">We Win Patents</h1>
-          <div class="introduction_index__desc">
-            <p class="introduction_index__text">
+      <div class="  introduction">
+        <div class="introduction__content introduction_index__content">
+          <h1 class="introduction__title">We Win Patents</h1>
+          <div class="introduction__desc">
+            <p class="introduction__text">
               "The Congress shall have the power... to promote the progress of science and useful arts, by securing for
               limited times to authors and inventors the exclusive right to their respective writings and discoveries.”
               US
@@ -26,16 +26,23 @@
           </div>
         </div>
         <div class="social_top_index">@@include('./../components/social-network.html')</div>
-        <a class="anchor__wrap_index" href="#">@@include('./../components/anchor.html')</a>
-      </article>
+        <a class="anchor__wrap_index" href="#offers-anchor">@@include('./../components/anchor.html')</a>
+      </div>
     </div>
+    <div class="section_top_overlay"></div>
   </section>
 
-  <section class="section-offers_index">
-    <div class="offers-product">
+  <section class="section-offers section-offers_index">
+    <a name='offers-anchor'> </a>
+    <div class="offers-patents offers-patents_index">
       <div class="container">
-        <div class="offers-product__content">
-          <div class="offers-product__container_card">
+        <div class="offers-patents__content">
+          <h2 class="offers-patents__title title_s">We Can Help With</h2>
+          <div class="offers-patents__container-cards">
+            
+              @@include('./../components/offers-patents.html')
+
+
 
           </div>
         </div>

@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap");
 // color
 $header__menu: rgba(255, 255, 255, 0.8);
+$dark-white: rgba(255, 255, 255, 0.8);
 $gold: #ffe195;
 $black: #000000;
 $text-color: #fff;
@@ -13,6 +14,7 @@ $dark-gold: #cfb87e;
 $header: rgba(1, 23, 45, 0.95);
 $btn_hidden: #0e1420;
 $menu_mobile: rgba(1, 23, 45, 0.95);
+$offers-patent-card: rgba(27, 49, 75, 0.75);
 //шрифт
 $font-signika: "Signika";
 $font-Playfair: "Playfair Display", serif;
@@ -29,7 +31,7 @@ $transition: 0.3s;
 body {
   margin: 0;
   height: 6000px;
-} 
+}
 * {
   box-sizing: border-box;
 }
@@ -54,4 +56,21 @@ ul {
 }
 a {
   text-decoration: none;
+}
+
+.text_left {
+  text-align: left;
+}
+.text_right {
+  text-align: right;
+}
+.text_center {
+  text-align: center;
+}
+.title_s {
+  font-weight: bold;
+  font-size: 32px;
+  letter-spacing: 0.4px;
+  line-height: 43px;
+  color: $white;
 }

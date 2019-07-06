@@ -35,11 +35,13 @@
 @mixin text($size, $line-height) {
   font-size: ($size) + px;
   line-height: ($line-height) + px;
-
   color: rgba(255, 255, 255, 0.8);
   font-family: $font-Playfair;
 }
-
+@mixin patents-card {
+  font-size: 16px;
+  line-height: 26px;
+}
 @mixin title($size, $line-height) {
   font-size: ($size) + px;
   line-height: ($line-height) + px;
@@ -56,4 +58,22 @@
   &:hover {
     opacity: 0.5;
   }
+}
+
+@mixin sprite_patents($position) {
+  background: url("./img/sprait/Sprait.png");
+  background-position: (($position) * (-1px)) -84px;
+  width: 83px;
+  height: 70px;
+}
+ 
+@mixin button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  transition: $transition;
 }

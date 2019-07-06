@@ -1,0 +1,100 @@
+.offers-patents_index {
+  background: #04020e;
+  padding: 230px 0;
+}
+.offers-patents {
+  &__container-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 13px 0 0 0;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: $offers-patent-card;
+    font-family: $font-signika;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    height: 380px;
+    width: 380px;
+    &:hover .offers-patents__icon {
+      opacity: 0.99;
+    }
+    &:hover .offers-patents__link {
+      background: $gold;
+      color: $black;
+    }
+  }
+  &__card-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0 50px 0px 50px;
+    height: 126px;
+  }
+  &__name {
+    text-align: center;
+    text-transform: uppercase;
+    color: $dark-white;
+    padding-top: 20px;
+    line-height: 20px;
+    font-size: 16px;
+    letter-spacing: 0.8px;
+  }
+  &__info_text {
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    color: $dark-white;
+  }
+
+  &__link {
+    @include button();
+    background: #2d3a52;
+    color: $dark-white;
+    width: 100%;
+    height: 50px;
+    letter-spacing: 1px;
+  }
+  &__icon {
+    margin-top: 50px;
+    transition: $transition;
+    opacity: 0.7;
+    &-house {
+      @include sprite_patents(561);
+    }
+    &-ruler {
+      @include sprite_patents(79);
+    }
+    &-notebook {
+      @include sprite_patents(159);
+    }
+    &-plant {
+      @include sprite_patents(240);
+    }
+    &-rewarding {
+      @include sprite_patents(318);
+    }
+    &-globe {
+      @include sprite_patents(398);
+    }
+  }
+}
+
+/* .offers-patents__card_wrap{
+  border: 1px solid wheat;
+  padding-bottom: 20px;
+}  
+ .red{
+  color: red
+} */

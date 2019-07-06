@@ -1,10 +1,14 @@
 .section_top_index {
-  background:linear-gradient(90deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%),
-  url('./img/background/mountains.png');
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%),
+    url("./img/background/mountains.png");
   background-repeat: no-repeat;
-  background-position: center; 
+  background-position: center;
   background-size: cover;
-  
+   
+}
+.section_top_overlay {
+  padding: 50px;
+  background: linear-gradient(to top, #04020e, rgba(230, 226, 224, 0));
 }
 .anchor__wrap_index {
   position: absolute;
@@ -12,13 +16,13 @@
   right: 50%;
   transform: translateX(50%);
 }
-.introduction_index {
-  padding: 91px 0 250px 0px;
-  &__content_index {
+.introduction  {
+  padding: 91px 0 150px 0px; 
+  &__content {
     padding-left: 10px;
     width: 50%;
     margin-left: auto;
-  }
+  } 
   &__title {
     @include title(64, 60);
   }
@@ -30,5 +34,5 @@
   }
 }
 .social_top_index {
-  margin-top: 208px; 
+  margin-top: 208px;
 }
