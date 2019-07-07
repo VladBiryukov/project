@@ -1,0 +1,46 @@
+.call-us {
+  &__box {
+    width: 100%;
+    padding: 25px 0 20px 0;
+    background: $feedback_bg;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: $transition;
+  }
+  &__info-block {
+    display: flex;
+    padding: 73px 100px 74px 100px;
+  }
+  &__info_left {
+    width: 50%;
+  }
+  &__info_right {
+    width: 50%;
+  }
+  &__title {
+    line-height: 42px;
+    letter-spacing: 0.1px;
+    white-space: nowrap;
+  }
+  &__desc {
+    padding: 0px 90px 10px 10px;
+  }
+  &__text {
+    letter-spacing: 0.1px;
+  }
+  &__text_consultation {
+    padding-top: 10px;
+    color: $white;
+  }
+  &__phone_desktop {
+    font-size: 32px;
+    padding-top: 17px;
+    display: inline-block;
+  }
+  &__phone_mobil{
+    font-size: 32px;
+    padding-top: 17px;
+    display: none;
+  }
+}

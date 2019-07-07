@@ -1,0 +1,19 @@
+.recently-won-patents {
+  &__content {
+    margin-left: auto;
+    width: 50%;
+    padding-left: 10px;
+    padding: 0 190px 0 10px;
+  }
+  &__text {
+    color: $dark-white;
+    padding-top: 19px;
+  }
+  &__title {
+    letter-spacing: -0.3px;
+  }
+  &__button {
+    margin-top: 28px;
+    letter-spacing: 1px;
+  }
+}

@@ -9,6 +9,11 @@
       text-align: center;
     }
   }
+  .recently-won-patents {
+    &__content {
+      padding: 0 110px 0 10px;
+    }
+  }
 }
 @media (max-width: 1150px) {
   .header {
@@ -32,8 +37,39 @@
       margin-top: 10px;
     }
   }
+  .feedback {
+    &__info-block {
+      flex-direction: column;
+      padding: 85px 25px 55px 25px;
+    }
+    &__info_left {
+      width: 100%;
+    }
+    &__info_right {
+      width: 100%;
+    }
+    &__desc {
+      padding: 15px 0px 0px 0px;
+    }
+    &__title {
+      width: 85%;
+    }
+  }
+  .recently-won-patents {
+    &__content {
+      padding: 0 30px 0 0px;
+    }
+  }
+  .call-us {
+    &__title {
+      font-size: 36px;
+    }
+  }
 }
 @media (max-width: 833px) {
+  .anchor__wrap_index{
+    top: 540px;
+  }
   .offers-patents {
     &__card {
       width: 45%;
@@ -42,7 +78,41 @@
       margin-top: 20px;
     }
     &__info {
-      padding: 0 15px 145px 15px;
+      padding: 0 15px 15px 15px;
+    }
+  }
+  .recently-won-patents {
+    &__content {
+      padding: 0 10px 0 10px;
+      margin: 0 auto;
+      width: 100%;
+    }
+  }
+  .call-us {
+    &__info-block {
+      display: flex;
+      padding: 25px 10px 35px 10px;
+    }
+    &__title {
+      font-size: 36px;
+    }
+    &__info-block {
+      flex-direction: column;
+    }
+    &__info_left {
+      width: 100%;    
+    }
+    &__info_right {
+      width: 100%;
+    }
+    &__desc { 
+      padding: 10px 10px 10px 0px;
+    }
+    &__phone_mobil{
+      display: inline-block;
+    }
+    &__phone_desktop{
+      display: none;
     }
   }
 }
@@ -105,7 +175,33 @@
       display: none;
     }
   }
+  .feedback {
+    &__info-block {
+      flex-direction: column;
+      padding: 10px 25px 45px 10px;
+    }
+    &__info_left {
+      width: 100%;
+      flex-direction: column;
+    }
+    &__info_right {
+      width: 100%;
+    }
+    &__title {
+      width: 100%;
+      padding-top: 10px;
+    }
+  }
+  .wide-button {
+    background: $gold;
+    color: $black;
+    &:hover {
+      background: $wide-button;
+      color: $dark-white;
+    }
+  }
 }
+
 @media (max-width: 445px) {
   .hamburger__wrap {
     top: 38px;
@@ -165,6 +261,11 @@
     }
     &__link {
       display: none;
+    }
+  }
+  .feedback {
+    &__info-block {
+      padding: 10px 25px 25px 10px;
     }
   }
 }

@@ -8,18 +8,21 @@
 @import "./pages/index";
 @import "./pages/contacts";
 
-//Импорт компонентов для страниц
+//Импорт компонентов для страниц  
 
 // основные компоненты
 @import "./components/header";
 @import "./components/footer"; 
 @import "./components/hamburger";
-// состовляющие
+// состовляющие    
 @import "./components/feedback";
 @import "./components/social-network";
 @import "./components/anchor";
 @import "./components/menu_mobil";
 @import "./components/offers-patent";
+@import "./components/recently-won-patents";
+@import "./components/call-us";
+@import "./components/blog-news";
 // 
 @import "./components/keyframes";
 @import "./components/media";

@@ -7,6 +7,8 @@ $gold: #ffe195;
 $header__menu: rgba(255, 255, 255, 0.8);
 $dark-white: rgba(255, 255, 255, 0.8);
 $text-color: #fff;
+$wide-button: #2d3a52;
+$dark-blue: #0e1420;
 // hover
 $dark-gold: #cfb87e;
 
@@ -19,7 +21,7 @@ $feedback_bg: rgba(27, 49, 75, 0.75);
 //шрифт
 $font-signika: "Signika";
 $font-Playfair: "Playfair Display", serif;
-//анимация
+//время анимация
 $transition: 0.3s;
 // стиль контента
 
@@ -29,9 +31,129 @@ $transition: 0.3s;
   padding: 0 20px;
   max-width: 1220px;
 }
+
+// позиция текста
+.text_left {
+  text-align: left;
+}
+.text_right {
+  text-align: right;
+}
+.text_center {
+  text-align: center;
+}
+//телефон
+.phone {
+  color: $gold;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: $font-Playfair;
+}
+// дата
+.date {
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: $font-signika;
+}
+//заголовки h1 h2 h3
+.title_s {
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 43px;
+  color: $white;
+  font-family: $font-Playfair;
+}
+.title_m {
+  font-weight: bold;
+  font-size: 56px;
+  line-height: 52px;
+  color: $white;
+  font-family: $font-Playfair;
+}
+
+.title_uppercase {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $dark-white;
+  font-family: $font-signika;
+}
+// текст p
+.text_s {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  color: $dark-white;
+  font-family: $font-signika;
+}
+.text_m {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 23px;
+  color: $dark-white;
+  font-family: $font-signika;
+}
+
+// кнопка во всю ширину контейнера
+.wide-button {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  width: 100%;
+  padding: 16px 0;
+  letter-spacing: 1px;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: $font-signika;
+  background: $wide-button;
+  transition: $transition;
+  color: $dark-white;
+  &:hover {
+    background: $gold;
+    color: $black;
+  }
+}
+
+// кнопка со стрелкой
+.button_arrow {
+  transition: $transition;
+  font-family: $font-signika;
+  display: inline-block;
+  text-transform: uppercase;
+  position: relative;
+  background: $gold;
+  color: $black;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 6px 20px 6px 40px;
+
+  &:before {
+    content: "";
+    background: url("./img/sprait/Sprait.png");
+    background-position: -0px -172px;
+    position: absolute;
+    display: inline-block;
+    left: 6%;
+    top: 8px;
+    height: 13px;
+    width: 16px;
+  }
+
+  &:hover {
+    color: $gold;
+    background: $dark-blue;
+  }
+  &:hover::before {
+    background-position: -0px -162px;
+  }
+}
+
+//сброс стилей
 body {
   margin: 0;
-  height: 6000px;
 }
 * {
   box-sizing: border-box;
@@ -57,49 +179,4 @@ ul {
 }
 a {
   text-decoration: none;
-}
-
-.text_left {
-  text-align: left;
-}
-.text_right {
-  text-align: right;
-}
-.text_center {
-  text-align: center;
-}
-.title_s {
-  font-weight: bold;
-  font-size: 32px;
-  letter-spacing: 0.4px;
-  line-height: 43px;
-  color: $white;
-  font-family: $font-Playfair;
-}
-// добавл спустя некоторое время когда дошло
-// то что так удобнее
-.text_s {
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 26px;
-  font-family: $font-signika;
-}
-.wide-button {
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 17px;
-  text-align: center;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  font-family: $font-signika;
-  color: rgba(255, 255, 255, 0.4);
-  background: #2d3a52;
-  width: 100%;
-  display: block;
-  transition: $transition;
-  padding: 16px 0;
-  &:hover {
-    background: $gold;
-    color: $black;
-  }
 }

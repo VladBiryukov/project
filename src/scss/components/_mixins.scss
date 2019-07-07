@@ -66,6 +66,10 @@
   width: 83px;
   height: 70px;
 }
+@mixin sprite_manual($position-x, $position-y) {
+  background: url("./img/sprait/Sprait.png");
+  background-position: (($position-x) * (-1px)) (($position-y) * (-1px));
+}
 
 @mixin button {
   display: flex;
