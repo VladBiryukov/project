@@ -4,7 +4,6 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-   
 }
 .section_top_overlay {
   padding: 50px;
@@ -16,13 +15,13 @@
   right: 50%;
   transform: translateX(50%);
 }
-.introduction  {
-  padding: 91px 0 150px 0px; 
+.introduction {
+  padding: 91px 0 150px 0px;
   &__content {
     padding-left: 10px;
     width: 50%;
     margin-left: auto;
-  } 
+  }
   &__title {
     @include title(64, 60);
   }
@@ -35,4 +34,7 @@
 }
 .social_top_index {
   margin-top: 208px;
+}
+.feedback__wrap_index {
+  margin-top: 100px;
 }

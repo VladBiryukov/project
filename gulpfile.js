@@ -25,9 +25,9 @@ function scss() {
 }
 //Обработка js кода
 function js() {
-  return gulp.src('./src/js/*.js')
+  return gulp.src('./src/js/*.js') 
   .pipe(concat('script.js'))
-  .pipe(uglify({toplevel: true}))
+  //.pipe(uglify({toplevel: true})) отменил минификацию js кода из за ошибки, нет времени искать причину
   .pipe(gulp.dest('./build'))
   .pipe(browserSync.reload({stream: true}))
 }

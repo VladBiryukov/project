@@ -9,13 +9,17 @@
 @import "./pages/contacts";
 
 //Импорт компонентов для страниц
-@import "./components/header";
-@import "./components/footer";
 
+// основные компоненты
+@import "./components/header";
+@import "./components/footer"; 
 @import "./components/hamburger";
+// состовляющие
+@import "./components/feedback";
 @import "./components/social-network";
 @import "./components/anchor";
-@import "./components/keyframes";
 @import "./components/menu_mobil";
 @import "./components/offers-patent";
+// 
+@import "./components/keyframes";
 @import "./components/media";

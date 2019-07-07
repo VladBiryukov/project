@@ -1,0 +1,43 @@
+.feedback__wrap_index {
+  margin-top: 100px;
+}
+.feedback {
+  &__box {
+    width: 100%;
+    padding: 0px 0 20px 0;
+    background: $feedback_bg;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+  }
+  &__info-block { 
+    display: flex;
+    padding: 72px 105px 64px 105px ;
+  }
+  &__title { 
+    width: 80%;
+    line-height: 42px;
+    letter-spacing: 0.1px;
+  }
+  &__text {
+    color: $dark-white;
+    letter-spacing: 0.2px;
+  }
+  &__desc { 
+    padding: 6px 90px 10px 10px;
+  }
+  
+  &__info_left { 
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+  }
+  &__info_right {
+    width: 50%; 
+  }
+  &__logo { 
+    @include sprite_patents(481);
+    height: 80px;
+    width: 80px;
+  }
+}
