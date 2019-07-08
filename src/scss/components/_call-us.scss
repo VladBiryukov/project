@@ -36,11 +36,19 @@
   &__phone_desktop {
     font-size: 32px;
     padding-top: 17px;
+    font-weight: 600;
+    color: $gold;
+    font-family: $font-Playfair;
+    text-decoration: none;
     display: inline-block;
   }
   &__phone_mobil{
-    font-size: 32px;
-    padding-top: 17px;
+    color: $gold;
     display: none;
+    font-size: 32px;
+    font-weight: 600;
+    padding-top: 17px;
+    text-decoration: none;
+    font-family: $font-Playfair;
   }
 }

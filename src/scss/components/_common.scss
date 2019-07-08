@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Signika:300,400,600&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 // color
 $black: #000000;
 $white: #ffffff;
@@ -21,7 +22,8 @@ $feedback_bg: rgba(27, 49, 75, 0.75);
 //шрифт
 $font-signika: "Signika";
 $font-Playfair: "Playfair Display", serif;
-//время анимация
+$font-Roboto:'Roboto', sans-serif;
+//время анимация 
 $transition: 0.3s;
 // стиль контента
 
@@ -42,13 +44,7 @@ $transition: 0.3s;
 .text_center {
   text-align: center;
 }
-//телефон
-.phone {
-  color: $gold;
-  text-decoration: none;
-  font-weight: 600;
-  font-family: $font-Playfair;
-}
+ 
 // дата
 .date {
   color: rgba(255, 255, 255, 0.5);
@@ -120,6 +116,7 @@ $transition: 0.3s;
   letter-spacing: 1px;
   display: block;
   text-align: center;
+  user-select: none;
   text-transform: uppercase;
   font-family: $font-signika;
   background: $wide-button;
@@ -135,6 +132,7 @@ $transition: 0.3s;
 .button_arrow {
   transition: $transition;
   font-family: $font-signika;
+  user-select: none;
   display: inline-block;
   text-transform: uppercase;
   position: relative;
@@ -161,8 +159,8 @@ $transition: 0.3s;
     color: $gold;
     background: $dark-blue;
   }
-  &:hover::before {
-    background-position: -0px -162px;
+  &:hover::before { 
+    background-position: -0px -161px;
   }
 }
 
