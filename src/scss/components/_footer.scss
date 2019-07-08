@@ -1,1 +1,26 @@
- 
+.footer {
+  background: #191230;
+  height: 290px;
+
+  &__box_menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__nav {
+    display: flex;
+  }
+  &__nav_items {
+    display: flex;
+  }
+
+  &__nav_item {
+    margin-right: 27px;
+  }
+  &__nav_link {
+    color: $white;
+  }
+  &__button {
+    padding-left: 50px;
+  }
+}

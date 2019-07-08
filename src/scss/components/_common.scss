@@ -57,6 +57,20 @@ $transition: 0.3s;
   line-height: 20px;
   font-family: $font-signika;
 }
+
+// стиль ссылок навигации
+.nav_link {
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: normal;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-family: $font-signika;
+  transition: $transition;
+  &:hover{
+    color:$gold;
+  }
+}
 //заголовки h1 h2 h3
 .title_s {
   font-weight: bold;
@@ -72,7 +86,7 @@ $transition: 0.3s;
   color: $white;
   font-family: $font-Playfair;
 }
-
+// заголовок с верзним регистром
 .title_uppercase {
   font-size: 16px;
   line-height: 20px;
@@ -124,6 +138,7 @@ $transition: 0.3s;
   display: inline-block;
   text-transform: uppercase;
   position: relative;
+  white-space: nowrap;
   background: $gold;
   color: $black;
   font-size: 14px;
