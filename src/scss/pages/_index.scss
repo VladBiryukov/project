@@ -10,6 +10,7 @@
   background: linear-gradient(to top, #04020e, rgba(230, 226, 224, 0));
 }
 .anchor__wrap_index {
+  user-select: none;
   position: absolute;
   top: 640px;
   right: 50%;
@@ -32,6 +33,13 @@
     @include text(16, 26);
   }
 }
+  .section-offers_index{
+    background: #04020e;
+ /*  background: url('./img/background/stars_bg.png');
+  background-repeat: no-repeat;
+  background-position-y: 100%;
+  background-size: cover;  */
+}  
 .social_top_index {
   margin-top: 208px;
 }

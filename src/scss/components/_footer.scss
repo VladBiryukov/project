@@ -1,5 +1,5 @@
 .footer {
-  background: linear-gradient(rgba(1, 11, 32, 0.808), rgba(1, 11, 32, 0.808)), url("./img/footer/footer-oveflay.png");
+  background:linear-gradient(20.85deg, rgba(0, 79, 173, 0.232) 6.96%, rgba(0, 79, 173, 0) 42.12%), url("./img/footer/footer-oveflay.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -78,7 +78,6 @@
   }
 }
 
-// подвал
 // рейтинг
 .footer {
   &__box_company-rating {
@@ -92,14 +91,6 @@
     color: $white;
     font-family: $font-Roboto;
   }
-  &__rating {
-    margin-left: 7px;
-    height: 15px;
-    width: 100px;
-    border: 1px solid white;
-  }
-}
-.footer {
   &__text_register {
     padding-top: 7px;
   }
@@ -120,5 +111,54 @@
     font-size: 14px;
     line-height: 11px;
     font-family: $font-Roboto;
+  }
+}
+
+.rating {
+  display: flex;
+  margin-left: 7px;
+  width: 100px;
+
+  &-star {
+    height: 16px;
+    width: 16px;
+    background: url("./img/sprait/Sprait.png");
+
+    background-position: -135px -165px;
+    // background-position: -31px -165px;
+    cursor: pointer;
+  }
+}
+
+.rating-star {
+  &:nth-child(1) {
+    &:hover .star_2 {
+      background-position: -31px -165px;
+    }
+  }
+}
+.star_1 {
+  &:hover {
+    background-position: -31px -165px;
+  }
+}
+.star_2 {
+  &:hover {
+    background-position: -31px -165px;
+  }
+}
+.star_3 {
+  &:hover {
+    background-position: -31px -165px;
+  }
+}
+.star_4 {
+  &:hover {
+    background-position: -31px -165px;
+  }
+}
+.star_5 {
+  &:hover {
+    background-position: -31px -165px;
   }
 }

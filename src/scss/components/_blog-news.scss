@@ -1,1 +1,102 @@
- 
+.blog-news__block_slider {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  transition: 1s;
+}
+.blog-news {
+  &__title {
+    margin-bottom: 36px;
+  }
+  &__button_mobil {
+    padding: 6px 17px;
+    background: rgba(255, 255, 255, 0.3);
+    color: $black;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 1px;
+    margin-top: -46px;
+    display: none;
+    display: inline-block;
+    text-transform: uppercase;
+    font-family: $font-signika;
+  }
+}
+.overlay-img {
+  // самый безобидный костыль с помощью которого я смог решить задачу
+  top: 0;
+  position: absolute;
+  width: 280px;
+  height: 200px;
+}
+
+.blog-post {
+  height: 360px;
+  width: 280px;
+  margin-bottom: 72px;
+
+  &:hover .overlay-img {
+    background: linear-gradient(rgba(255, 225, 149, 0.6), rgba(255, 225, 149, 0.6));
+  }
+
+  &__img {
+    position: relative; // для overlay-img
+    margin-bottom: 10px;
+    width: 280px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &_post_1 {
+      transition: $transition;
+      background: url("./img/posts/post_1.png");
+    }
+    &_post_2 {
+      background: url("./img/posts/post_2.png");
+    }
+    &_post_3 {
+      background: url("./img/posts/post_3.png");
+    }
+    &_post_4 {
+      background: url("./img/posts/post_4.png");
+    }
+  }
+  &__title {
+    margin-top: 4px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 300;
+    letter-spacing: 0.1px;
+    text-transform: uppercase;
+    font-family: $font-signika;
+    color: $dark-white;
+  }
+  &__text {
+    margin-top: 5px;
+    font-size: 16px;
+    line-height: 23px;
+    font-weight: 300;
+    letter-spacing: 0.1px;
+    font-family: $font-signika;
+    color: $dark-white;
+  }
+}
+
+.control-slide__blog-news {
+  display: flex;
+  //display: none;
+}
+.button-control {
+  background: $gold;
+  width: 25px;
+  height: 2px;
+  margin-right: 8px;
+  opacity: 0.3;
+  transition: 0.2s;
+  &:hover {
+    opacity: 0.7;
+  }
+  &:active {
+    opacity: 0.99;
+  }
+}
