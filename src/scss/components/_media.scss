@@ -14,7 +14,7 @@
       padding: 0 110px 0 10px;
     }
   }
-  .blog-news__block_slider {
+  .blog-news__slider {
     justify-content: space-around;
   }
   .footer {
@@ -235,22 +235,21 @@
     text-align: center;
   }
   .blog-news__wrap_slider {
-    overflow: hidden;
+    overflow: hidden; 
     width: 280px;
     margin: 0 auto;
   }
-  .blog-news__block_slider {
+  // полоса со слайдами
+  .blog-news__strip-slider {
     flex-wrap: nowrap;
-    width: 1200px;
-    transform: translateX(-900px);
+    width: 1200px;  
+    position: relative;
+    left: 0px;
+
   }
   .blog-post {
     margin-right: 20px;
   }
-
-  /*  .blog-post__slider_1{
-transform: translateX(-215px)
-  } */
 
   .footer {
     &__box_info {
