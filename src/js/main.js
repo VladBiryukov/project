@@ -12,40 +12,34 @@ for (let anchor of anchors) {
     })
   })
 }
-/* document.getElementsByClassName('button--device')[0].onclick = function() {
-  if(!this.classList.contains('button--device-active')){
-      this.classList.add('button--device-active'),
-      document.getElementsByClassName('button__burger')[0].classList.add('button__burger--active'),
-      document.getElementsByClassName('header__menu--device')[0].classList.add('header__menu--device-active');
-  }
-  else{
-      this.classList.remove('button--device-active'),
-      document.getElementsByClassName('button__burger')[0].classList.remove('button__burger--active'),
-      document.getElementsByClassName('header__menu--device')[0].classList.remove('header__menu--device-active');
-  }
-}; */
-
-//button-control_1 blog-news__block_slider
-
 
 
 var strip_slider = document.getElementById('strip-slider__blog')
-
 var control_1 = document.getElementById('control-sleder_1');
 var control_2 = document.getElementById('control-sleder_2');
 var control_3 = document.getElementById('control-sleder_3');
 var control_4 = document.getElementById('control-sleder_4');
+var button_hamburger = document.getElementsByClassName("hamburger")[0];
+var modal_menu = document.getElementsByClassName("modal_menu")[0];
 
-var number_position = ['0px','-300px','-600px','-900px'];
 
- 
- 
+var number_position = ['0px', '-300px', '-600px', '-900px'];
 var control_bgc = ['rgba(255, 225, 149, 0.3)', '#ffe195'];
 
 control_1.style.backgroundColor = '#ffe195';
 
+button_hamburger.onclick = function () {
+  if (!!modal_menu.classList.contains("modal_menu-hidden-js")) {
+    modal_menu.classList.remove("modal_menu-hidden-js");
+    modal_menu.classList.add("modal_menu-open-js")
+  }
+  else if (!modal_menu.classList.contains("modal_menu-hidden-js")) {
+    modal_menu.classList.remove("modal_menu-open-js");
+    modal_menu.classList.add("modal_menu-hidden-js")
+  }
+}
 
- 
+
 
 control_1.onclick = function () {
   strip_slider.style.left = number_position[0];
@@ -81,7 +75,10 @@ control_4.onclick = function () {
 
 
 
- 
+
+
+
+
 
 
 
