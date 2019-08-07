@@ -31,14 +31,15 @@ control_1.style.backgroundColor = '#ffe195';
 button_hamburger.onclick = function () {
   if (!!modal_menu.classList.contains("modal_menu-hidden-js")) {
     modal_menu.classList.remove("modal_menu-hidden-js");
-    modal_menu.classList.add("modal_menu-open-js")
+    modal_menu.classList.add("modal_menu-open-js");
+    document.body.style.overflow = "hidden"
   }
   else if (!modal_menu.classList.contains("modal_menu-hidden-js")) {
     modal_menu.classList.remove("modal_menu-open-js");
-    modal_menu.classList.add("modal_menu-hidden-js")
+    modal_menu.classList.add("modal_menu-hidden-js");
+    document.body.style.overflow = "auto"
   }
 }
-
 
 
 control_1.onclick = function () {
